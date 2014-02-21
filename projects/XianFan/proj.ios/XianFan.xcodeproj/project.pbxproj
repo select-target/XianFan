@@ -230,6 +230,7 @@
 		6B45D39318B7219D000F20B9 /* stroyxml in Resources */ = {isa = PBXBuildFile; fileRef = 6B45D38E18B7219D000F20B9 /* stroyxml */; };
 		6B45D39618B721C7000F20B9 /* LoginScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B45D39418B721C7000F20B9 /* LoginScene.cpp */; };
 		6B45D39918B7229D000F20B9 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B45D39718B7229D000F20B9 /* SceneManager.cpp */; };
+		6B45D3A318B75AD9000F20B9 /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B45D3A118B75AD9000F20B9 /* Actor.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
@@ -725,6 +726,9 @@
 		6B45D39518B721C7000F20B9 /* LoginScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginScene.h; path = ../Classes/LoginScene.h; sourceTree = "<group>"; };
 		6B45D39718B7229D000F20B9 /* SceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneManager.cpp; path = ../Classes/SceneManager.cpp; sourceTree = "<group>"; };
 		6B45D39818B7229D000F20B9 /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneManager.h; path = ../Classes/SceneManager.h; sourceTree = "<group>"; };
+		6B45D39E18B7568F000F20B9 /* ImagePaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImagePaths.h; path = ../Classes/ImagePaths.h; sourceTree = "<group>"; };
+		6B45D3A118B75AD9000F20B9 /* Actor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Actor.cpp; path = ../Classes/Actor.cpp; sourceTree = "<group>"; };
+		6B45D3A218B75AD9000F20B9 /* Actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Actor.h; path = ../Classes/Actor.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -1716,6 +1720,8 @@
 		6B45D38118B650AB000F20B9 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				6B45D39F18B758A3000F20B9 /* AnimatedSprite */,
+				6B45D39D18B75673000F20B9 /* Utility */,
 				6B45D38418B650C5000F20B9 /* GameScene */,
 				6B45D38318B650BD000F20B9 /* MainMenu */,
 				6B45D38218B650B5000F20B9 /* SceneManager */,
@@ -1755,6 +1761,23 @@
 				1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */,
 			);
 			name = Unused;
+			sourceTree = "<group>";
+		};
+		6B45D39D18B75673000F20B9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				6B45D39E18B7568F000F20B9 /* ImagePaths.h */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		6B45D39F18B758A3000F20B9 /* AnimatedSprite */ = {
+			isa = PBXGroup;
+			children = (
+				6B45D3A118B75AD9000F20B9 /* Actor.cpp */,
+				6B45D3A218B75AD9000F20B9 /* Actor.h */,
+			);
+			name = AnimatedSprite;
 			sourceTree = "<group>";
 		};
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
@@ -1944,6 +1967,7 @@
 				15A3D9AE1682F7F9002FB0C5 /* cpSpaceQuery.c in Sources */,
 				15A3D9AF1682F7F9002FB0C5 /* cpSpaceStep.c in Sources */,
 				15A3D9B01682F7F9002FB0C5 /* cpSpatialIndex.c in Sources */,
+				6B45D3A318B75AD9000F20B9 /* Actor.cpp in Sources */,
 				15A3D9B11682F7F9002FB0C5 /* cpSweep1D.c in Sources */,
 				15A3D9B21682F7F9002FB0C5 /* cpVect.c in Sources */,
 				15A3DA311682F826002FB0C5 /* CCBAnimationManager.cpp in Sources */,

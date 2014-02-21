@@ -15,6 +15,7 @@
 USING_NS_CC;
 USING_NS_CC_EXT;
 
+class Actor;
 class LoginScene : public CCNode
 , public CCBSelectorResolver
 , public CCBMemberVariableAssigner
@@ -38,8 +39,15 @@ public:
     virtual bool onAssignCCBCustomProperty(CCObject* pTarget, const char* pMemberVariableName, CCBValue* pCCBValue);
     
     void onNodeLoaded(CCNode *pNode, CCNodeLoader *pNodeLoader);
-private:
     
+    virtual void update(float dt);
+private:
+    void loadResource();
+    void addEffect();
+    
+    CCSpriteBatchNode* m_backgroundBacthNode;
+    Actor* m_shiningEffect;
+    Actor* m_holoEffect;
 };
 
 class LoginSceneLoader : public CCNodeLoader{
