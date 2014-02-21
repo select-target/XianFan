@@ -27,8 +27,6 @@ typedef struct
 
 class Actor : public cocos2d::CCSprite
 {
-    
-    
 public:
     Actor():m_dictionary(NULL)
     ,m_isFlipX(false)
