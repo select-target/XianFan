@@ -1,0 +1,11 @@
+HELLO            = "Hello \n Guys";
+HELLO2            = "===Hello \n Guys";
+MENU_ITEM_START = "Start";
+MENU_ITEM_LEADERBOARD = "Leaderboard";
+MENU_ITEM_HELP = "Help"
+MENU_ITEM_RESUME = "Continue"
+MENU_ITEM_EXIT = "Return Main Menu"
+MENU_ITEM_RESTART = "Restart"
+NO_CHAR_SELECTED = "No Character Selected"
+
+

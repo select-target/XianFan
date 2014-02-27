@@ -19,7 +19,8 @@
 typedef struct
 {
     std::string frameName;
-    int count;
+    int startIndex;
+    int endIndex;
     int loops;
     bool restoreFirstFrame;
     float interval;

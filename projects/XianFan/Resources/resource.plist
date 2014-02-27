@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>resource</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>login</string>
+			<key>audio</key>
+			<array/>
+			<key>texture</key>
+			<array>
+				<string>graphic/ui/login_allbd.jpg</string>
+				<string>graphic/ui/ui_image_1.png</string>
+			</array>
+			<key>plist</key>
+			<array>
+				<string>graphic/ui/ui_image_1.plist</string>
+			</array>
+		</dict>
+		<dict/>
+	</array>
+</dict>
+</plist>

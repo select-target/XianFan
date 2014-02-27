@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "SceneManager.h"
+#include "ResourceManager.h"
 
 USING_NS_CC;
 
@@ -24,6 +25,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     pDirector->setAnimationInterval(1.0 / 60);
 
+    //ResourceManager::sharedResourceManager()->getPlistArrayByScene(kSceneLogin);
     SceneManager::sharedSceneManager()->showLoginScene();
     
     return true;

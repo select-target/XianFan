@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+environment/project/0.756827735/C_INCLUDE_PATH/delimiter=\:
+environment/project/0.756827735/C_INCLUDE_PATH/operation=append
+environment/project/0.756827735/C_INCLUDE_PATH/value=../Classes/protobuf
+environment/project/0.756827735/NDK/delimiter=\:
+environment/project/0.756827735/NDK/operation=replace
+environment/project/0.756827735/NDK/value=/Users/bairyan/android-ndk-r9c
+environment/project/0.756827735/NDK_ROOT/delimiter=\:
+environment/project/0.756827735/NDK_ROOT/operation=replace
+environment/project/0.756827735/NDK_ROOT/value=/Users/bairyan/android-ndk-r9c
+environment/project/0.756827735/append=true
+environment/project/0.756827735/appendContributed=true

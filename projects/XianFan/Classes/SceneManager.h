@@ -10,10 +10,23 @@
 #define __XianFan__SceneManager__
 
 #include "cocos2d.h"
+#include "LoadingScene.h"
 
 USING_NS_CC;
 
-class SceneManager :public CCNode
+enum
+{
+    kSceneNone = 0,
+    kSceneLogin,
+    kSceneCreateCharacter,
+    kSceneSelectCharacter,
+    kSceneWorldScene,
+    kSceneCityScene,
+    kSceneBattleScene
+};
+
+class SceneManager : public CCNode
+                   , public LoadingSceneDelegate
 {
 public:
     static SceneManager *sharedSceneManager();
@@ -25,7 +38,15 @@ public:
     CREATE_FUNC(SceneManager);
     
     void showLoginScene();
+    void showLoadingScene(int sceneType);
+    void showCreateCharacter();
+    void showSelectCharacter();
+    void returnLoginScene();
+    
+    // LoadingSceneDelegate
+    virtual void onLoadingSceneFinished(LoadingScene* loadingScene, int toSceneType);
 private:
+    CC_SYNTHESIZE_READONLY(int, m_currentSceneType, CurrentSceneType);
 };
 
 #endif /* defined(__XianFan__SceneManager__) */

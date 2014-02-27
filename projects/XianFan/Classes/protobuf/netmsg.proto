@@ -1,0 +1,11 @@
+package MessageCode;
+
+//@@ 0x00100
+message ProtoLoginReq {
+  required int32 authID = 1;
+}
+
+//@@ 0x00101
+message ProtoLoginRes {
+   required int32 mapID = 1;
+}

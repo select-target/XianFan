@@ -26,17 +26,68 @@ package com.ryanflees.xianfan;
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup.LayoutParams;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.FrameLayout;
 
 public class XianFan extends Cocos2dxActivity{
 	
+	static XianFan xianfanActivity = null;
+	
+	View m_view = null;
+	FrameLayout m_viewLayout = null;
+	
     protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);	
-	}
+		xianfanActivity = this;
+		m_viewLayout = new FrameLayout(this);
+		addContentView(m_viewLayout, new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+    }
+    
+    static XianFan getInstance()
+    {
+    	return xianfanActivity;
+    }
+    
+    public void showCustomView()
+    {
+    	//return;
+    	
+    	this.runOnUiThread(new Runnable(){
 
+			@SuppressLint("SetJavaScriptEnabled")
+			@Override
+			public void run() {
+				LoginLinearLayout loginLayout = new LoginLinearLayout(xianfanActivity);
+				m_viewLayout.addView(loginLayout);
+				
+//				WebView webView = new WebView(xianfanActivity);
+//				webView.getSettings().setJavaScriptEnabled(true);   
+//				webView.getSettings().setBuiltInZoomControls(true);
+//				webView.loadUrl("http://www.baidu.com");
+//				webView.requestFocus();
+//				webView.setWebViewClient(new WebViewClient(){       
+//                    public boolean shouldOverrideUrlLoading(WebView view, String url) {   
+//                        if(url.indexOf("tel:")<0){
+//                            view.loadUrl(url); 
+//                        }
+//                        return true;       
+//                    }    
+//                });
+//				m_viewLayout.addView(webView);
+				
+			}
+    	});
+    	
+    }
+    
     public Cocos2dxGLSurfaceView onCreateView() {
     	Cocos2dxGLSurfaceView glSurfaceView = new Cocos2dxGLSurfaceView(this);
-    	// XianFan should create stencil buffer
+    	// XianF an should create stencil buffer
     	glSurfaceView.setEGLConfigChooser(5, 6, 5, 0, 16, 8);
     	
     	return glSurfaceView;

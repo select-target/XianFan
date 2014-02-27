@@ -437,7 +437,8 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/SceneManager.o: \
  /Users/bairyan/Github/XianFan/projects/XianFan/proj.android/../../../extensions/spine/Skeleton.h \
  /Users/bairyan/Github/XianFan/projects/XianFan/proj.android/../../../extensions/spine/SkeletonJson.h \
  /Users/bairyan/Github/XianFan/projects/XianFan/proj.android/../../../extensions/spine/CCSkeleton.h \
- /Users/bairyan/Github/XianFan/projects/XianFan/proj.android/../../../extensions/spine/CCSkeletonAnimation.h
+ /Users/bairyan/Github/XianFan/projects/XianFan/proj.android/../../../extensions/spine/CCSkeletonAnimation.h \
+ jni/../../Classes/CreateCharacter.h
 
 jni/../../Classes/SceneManager.h:
 
@@ -1316,3 +1317,5 @@ jni/../../Classes/LoginScene.h:
 /Users/bairyan/Github/XianFan/projects/XianFan/proj.android/../../../extensions/spine/CCSkeleton.h:
 
 /Users/bairyan/Github/XianFan/projects/XianFan/proj.android/../../../extensions/spine/CCSkeletonAnimation.h:
+
+jni/../../Classes/CreateCharacter.h:

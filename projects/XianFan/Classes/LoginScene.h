@@ -15,6 +15,10 @@
 USING_NS_CC;
 USING_NS_CC_EXT;
 
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+#include "LoginViewNode.h"
+#endif
+
 class Actor;
 class LoginScene : public CCNode
 , public CCBSelectorResolver
@@ -44,10 +48,18 @@ public:
 private:
     void loadResource();
     void addEffect();
+    void onButtonClicked(CCObject* sender);
     
     CCSpriteBatchNode* m_backgroundBacthNode;
-    Actor* m_shiningEffect;
-    Actor* m_holoEffect;
+    CCNode* m_startButton;
+    Actor* m_shining;
+    Actor* m_halo;
+    Actor* m_bufferFly;
+    
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    void addLoginViewNode();
+    LoginViewNode* m_loginViewNode;
+#endif
 };
 
 class LoginSceneLoader : public CCNodeLoader{

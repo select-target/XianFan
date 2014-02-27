@@ -32,8 +32,38 @@ Actor *Actor::createWithSpriteImageNameAndKey(const char* imageName, AnimationPa
 
 bool Actor::initWithSpriteImageNameAndKey(const char* imageName, AnimationParam *animationParam, const char *key)
 {
-    //not implemented
-    return false;
+    if (!CCSprite::initWithFile(imageName)) {
+        return false;
+    }
+    
+    m_dictionary = CCDictionary::create();
+    m_dictionary->retain();
+    
+    CCAssert(key != NULL && strcmp(key, "") != 0, "key cant be nil or nothing");
+    
+    CCAssert(animationParam, "animation param cant be nil");
+    //add animation
+    
+    CCAnimation *animation = CCAnimationCache::sharedAnimationCache()->animationByName(key);
+    if (animation == NULL) {
+        animation = CCAnimation::create();
+        for (int i=animationParam->startIndex; i <= animationParam->endIndex; i++) {
+            CCString *imageName = CCString::createWithFormat("%s%.02i.png",animationParam->frameName.c_str(),i);
+            CCTexture2D *texture = CCTextureCache::sharedTextureCache()->addImage(imageName->getCString());
+            CCSpriteFrame *frame = CCSpriteFrame::createWithTexture(texture, CCRectMake(0, 0, texture->getContentSize().width, texture->getContentSize().height));
+            animation->addSpriteFrame(frame);
+        }
+        animation->setDelayPerUnit(animationParam->interval);
+        animation->setLoops(animationParam->loops);
+        animation->setRestoreOriginalFrame(animationParam->restoreFirstFrame);
+        CCAnimationCache::sharedAnimationCache()->addAnimation(animation, key);
+    }
+    m_dictionary->setObject(animation, key);
+    CCAnimate *animate = CCAnimate::create(animation);
+    m_sequence = animate;
+    runAction(m_sequence);
+    
+    return true;
 }
 
 Actor *Actor::createWithSpriteFrameNameAndKey(const char *frameName, AnimationParam *animationParam, const char *key)
@@ -69,7 +99,7 @@ bool Actor::initWithSpriteFrameNameAndKey(const char *frameName, AnimationParam 
     CCAnimation *animation = CCAnimationCache::sharedAnimationCache()->animationByName(key);
     if (animation == NULL) {
         animation = CCAnimation::create();
-        for (int i=0; i < animationParam->count; i++) {
+        for (int i=animationParam->startIndex; i <= animationParam->endIndex; i++) {
             CCString *realFrameName = CCString::createWithFormat("%s%.02i.png",animationParam->frameName.c_str(),i);
             CCSpriteFrame *frame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(realFrameName->getCString());
             animation->addSpriteFrame(frame);
@@ -99,7 +129,7 @@ void Actor::addSubFormWithSpriteFrameNameAndKey(const char *frameName, Animation
     if (animation == NULL) {
         animation = CCAnimation::create();
         
-        for (int i=1; i <= animationParam->count; i++) {
+        for (int i=animationParam->startIndex; i <= animationParam->endIndex; i++) {
             CCString *realFrameName = CCString::createWithFormat("%s%.02i.png",animationParam->frameName.c_str(),i);
             CCSpriteFrame *frame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(realFrameName->getCString());
             animation->addSpriteFrame(frame);

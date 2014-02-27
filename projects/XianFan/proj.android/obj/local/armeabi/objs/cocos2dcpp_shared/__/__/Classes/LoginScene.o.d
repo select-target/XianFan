@@ -437,7 +437,24 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/LoginScene.o: \
  /Users/bairyan/Github/XianFan/projects/XianFan/proj.android/../../../extensions/spine/SkeletonJson.h \
  /Users/bairyan/Github/XianFan/projects/XianFan/proj.android/../../../extensions/spine/CCSkeleton.h \
  /Users/bairyan/Github/XianFan/projects/XianFan/proj.android/../../../extensions/spine/CCSkeletonAnimation.h \
- jni/../../Classes/Actor.h
+ jni/../../Classes/Actor.h jni/../../Classes/SceneManager.h \
+ jni/../../Classes/protobuf/RCMessage.h \
+ jni/../../Classes/protobuf/netmsg.pb.h \
+ jni/../../Classes/google/protobuf/stubs/common.h \
+ /Users/bairyan/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/cstddef \
+ jni/../../Classes/google/protobuf/generated_message_util.h \
+ jni/../../Classes/google/protobuf/message.h \
+ jni/../../Classes/google/protobuf/message_lite.h \
+ jni/../../Classes/google/protobuf/descriptor.h \
+ jni/../../Classes/google/protobuf/repeated_field.h \
+ /Users/bairyan/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/algorithm \
+ /Users/bairyan/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/iterator \
+ jni/../../Classes/google/protobuf/stubs/type_traits.h \
+ jni/../../Classes/google/protobuf/stubs/template_util.h \
+ jni/../../Classes/google/protobuf/extension_set.h \
+ jni/../../Classes/google/protobuf/unknown_field_set.h \
+ /Users/bairyan/android-ndk-r9c/platforms/android-14/arch-arm/usr/include/jni.h \
+ /Users/bairyan/Github/XianFan/projects/XianFan/proj.android/../../../cocos2dx/platform/android/jni/JniHelper.h
 
 jni/../../Classes/LoginScene.h:
 
@@ -1316,3 +1333,39 @@ jni/../../Classes/LoginScene.h:
 /Users/bairyan/Github/XianFan/projects/XianFan/proj.android/../../../extensions/spine/CCSkeletonAnimation.h:
 
 jni/../../Classes/Actor.h:
+
+jni/../../Classes/SceneManager.h:
+
+jni/../../Classes/protobuf/RCMessage.h:
+
+jni/../../Classes/protobuf/netmsg.pb.h:
+
+jni/../../Classes/google/protobuf/stubs/common.h:
+
+/Users/bairyan/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/cstddef:
+
+jni/../../Classes/google/protobuf/generated_message_util.h:
+
+jni/../../Classes/google/protobuf/message.h:
+
+jni/../../Classes/google/protobuf/message_lite.h:
+
+jni/../../Classes/google/protobuf/descriptor.h:
+
+jni/../../Classes/google/protobuf/repeated_field.h:
+
+/Users/bairyan/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/algorithm:
+
+/Users/bairyan/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/iterator:
+
+jni/../../Classes/google/protobuf/stubs/type_traits.h:
+
+jni/../../Classes/google/protobuf/stubs/template_util.h:
+
+jni/../../Classes/google/protobuf/extension_set.h:
+
+jni/../../Classes/google/protobuf/unknown_field_set.h:
+
+/Users/bairyan/android-ndk-r9c/platforms/android-14/arch-arm/usr/include/jni.h:
+
+/Users/bairyan/Github/XianFan/projects/XianFan/proj.android/../../../cocos2dx/platform/android/jni/JniHelper.h:
